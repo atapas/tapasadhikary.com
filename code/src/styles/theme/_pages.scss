@@ -1,3 +1,39 @@
 // --------------------------
 // Pages
 // --------------------------
+
+.list-project {
+    $thumb-height: 220px;
+
+    & &__item {
+        margin-bottom: $spacer-base;
+        
+        .project {
+            &__thumb {
+                display: block;
+                height: $thumb-height;
+                border: solid 3px $theme-color-grey-light-very;
+                overflow: hidden;
+            }
+            &__title {
+                margin-top: $spacer-base;
+                font-family: $font-family-sans-serif;
+                font-size: $theme-fs-lg;
+                font-weight: $theme-fw-bold;
+                color: $theme-color-black;
+                letter-spacing: -0.02rem;
+
+                a {
+                    color: $theme-color-black;
+                }
+            }
+
+            &__desc {
+                font-family: $font-family-sans-serif;
+                font-size: $theme-fs-bs;
+                color: $theme-color-grey-light;
+                font-weight: $theme-fw-bold;
+            }
+        }
+    }
+}

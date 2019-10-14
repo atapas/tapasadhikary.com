@@ -6,6 +6,9 @@
 // Base font face definition
 
 @include font-face($base-font-regular-name, $base-font-regular-url, 500, normal, woff2 woff ttf svg);
+@include font-face($base-font-regular-name, $base-font-italic-url, 500, italic, woff2 woff ttf svg);
+@include font-face($base-font-regular-name, $base-font-bold-url, 700, normal, woff2 woff ttf svg);
+@include font-face($base-font-regular-name, $base-font-bold-italic-url, 700, italic, woff2 woff ttf svg);
 
 // @include font-face(
 // 	$base-font-regular-name,
@@ -92,22 +95,51 @@ small {
 
 // Section Title
 .section-title {
+	position: relative;
 	margin-top: $spacer-xl;
 	margin-bottom: $spacer-xxl;
+	padding-bottom: $spacer-md;
 	font-size: $theme-fs-xxxl;
 	font-weight: $theme-fw-bold;
 	color: $theme-color-black;
 	line-height: $theme-line-height-min;
+	letter-spacing: -0.1rem;
+	text-align: center;
 
 	small {
 		display: block;
 		font-family: $font-family-serif;
 		font-size: $theme-fs-lg;
 		font-weight: $theme-fw-normal;
-		color: $theme-color-green;
+		color: $theme-color-brand;
+	}
+
+	&::before {
+		@include border-radius(50%);
+		content: "";
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		left: 50%;
+		bottom: 0;
+		margin-left: -10px;
+		transform: translateX(-50%);
+		background-color: $theme-color-brand;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100px;
+		height: 8px;
+		left: 50%;
+		bottom: 0;
+		margin-left: 50px;
+		transform: translateX(-50%);
+		background-color: $theme-color-brand;
 	}
 
 	&--green {
-		color: $theme-color-green;
+		color: $theme-color-brand;
 	}
 }
