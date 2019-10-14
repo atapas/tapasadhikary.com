@@ -1,0 +1,126 @@
+//--------------------------------------------
+// Typography
+//--------------------------------------------
+
+$base-font-regular-url:				'../fonts/text/klima-regular-webfont';
+$base-font-italic-url: 				'../fonts/text/klima-regular-italic-webfont';
+$base-font-bold-url: 				'../fonts/text/klima-bold-webfont';
+$base-font-bold-italic-url:			'../fonts/text/klima-bold-italic-webfont';
+
+$base-font-serif-regular-url:		'../fonts/text/livvic-regular-webfont';
+// $base-font-serif-italic-url: 		'../fonts/playfairdisplay/PlayfairDisplay-Italic';
+// $base-font-serif-bold-url: 			'../fonts/playfairdisplay/PlayfairDisplay-Bold';
+// $base-font-serif-bold-italic-url:	'../fonts/playfairdisplay/PlayfairDisplay-BoldItalic';
+
+$icon-font-url:				'../fonts/icons/theme-icons';
+
+// Font Names
+$base-font-regular-name:	'Klima';
+$base-font-serif-name:		'Livvic';
+$icon-font-name:			'vv-icons';
+
+$font-family-sans-serif:	$base-font-regular-name, Helvetica, Arial, sans-serif;
+$font-family-serif:			$base-font-serif-name, 'Times New Roman', Georgia, serif;
+$font-family-icon:			$icon-font-name !important;
+
+$font-family-base: 			$font-family-sans-serif;
+$font-family-secondary:		$font-family-serif;
+
+$theme-fs-unit:				16px !default;
+
+$theme-fs-xxs:			 	11px !default; 
+$theme-fs-xs:			 	ceil(($theme-fs-unit * .80)) !default; 
+$theme-fs-sm:			 	ceil(($theme-fs-unit * .875)) !default; 
+$theme-fs-bs:				ceil(($theme-fs-unit * 1)) !default;
+$theme-fs-bsl:				ceil(($theme-fs-unit * 1.125)) !default;
+$theme-fs-md:			 	ceil(($theme-fs-unit * 1.50)) !default; 
+$theme-fs-lg:			 	ceil(($theme-fs-unit * 1.70)) !default; 
+$theme-fs-xl:			 	ceil(($theme-fs-unit * 2.25)) !default; 
+$theme-fs-xxl:			 	ceil(($theme-fs-unit * 3.4)) !default; 
+$theme-fs-xxxl:			 	ceil(($theme-fs-unit * 4.25)) !default; 
+$theme-fs-5x:			 	ceil(($theme-fs-unit * 5)) !default; 
+$theme-fs-6x:			 	ceil(($theme-fs-unit * 6)) !default; 
+
+$theme-line-height-base:	1.428571429 !default;
+$theme-line-height-large:   1.8 !default; // extra decimals for Win 8.1 Chrome
+$theme-line-height-small:   1.2 !default;
+$theme-line-height-min:     1;
+
+$theme-fw-normal: 	300 !default;
+$theme-fw-bold: 	700 !default;
+
+//--------------------------------------------
+// Colors
+//--------------------------------------------
+
+// Primary Colors
+$theme-color-green:         #1ab122;
+
+
+// Secondary Colors
+$theme-color-beige:             #f0ebe8;
+$theme-color-grey:              #5e6166;
+$theme-color-grey-light:        #919191;
+$theme-color-grey-light-very:   #e7e8e9;
+$theme-color-grey-light-super:  #f6f6f6;
+
+// Generic Colors
+$theme-color-black: 		#1a1b1d;
+$theme-color-black-full: 	#000000;
+$theme-color-white: 		rgb(255,255,255);
+
+// Notification colors
+$error: 					#f95355;
+$success: 					#66be68;
+$warning: 					orange;
+
+
+// Body
+$theme-body-bg: 			$theme-color-white;
+$theme-body-fg: 			$theme-color-black;
+
+
+// Spacers
+$spacer-none:  0;
+$spacer-xs:    4px;
+$spacer-sm:    8px;
+$spacer-base:  16px;
+$spacer-md:    24px;
+$spacer-lg:    32px;
+$spacer-xl:    48px;
+$spacer-xxl:   64px;
+
+$spacer-size-list: (
+    xs:     $spacer-xs,
+    sm:     $spacer-sm,
+    base:   $spacer-base,
+    md:     $spacer-md,
+    lg:     $spacer-lg,
+    xl:     $spacer-xl,
+    xxl:    $spacer-xxl,
+    none:   0
+);
+
+$spacer-sides: top right bottom left;
+$box-boundary-list: (
+    in: padding,
+    out: margin
+);
+
+// Graphics media
+$theme-image-path:'../img/';
+$theme-main-logo-image: $theme-image-path + 'logo-theme.png';
+
+
+// Responsive Breakpoints
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-md-max: 1024px !default;
+$screen-lg-min: 1172px !default;
+$screen-lg-max: 1200px !default;
+$screen-xl-min: 1400px !default;
+$screen-xxl-min: 1600px !default;
+$screen-xs-smax: 740px !default;
+$screen-xs-max: 568px !default;
+$screen-xs-min: 468px !default;
+$screen-base:   320px !default;

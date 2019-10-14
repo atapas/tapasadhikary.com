@@ -1,0 +1,18 @@
+// --------------------------
+// Base
+// --------------------------
+
+body {
+	font-family: $font-family-base;
+	font-size: $theme-fs-bs;
+	background: $theme-body-bg;
+	color: $theme-body-fg;
+}
+
+// Horizontal Rule
+hr {
+	margin: $spacer-lg 0; 
+	$border-color: lighten($theme-color-black, 10%);
+	border-color: $border-color;
+	position: relative; 
+}

@@ -1,0 +1,113 @@
+// --------------------------
+// Typography
+// --------------------------
+@import 'theme/mixins';
+
+// Base font face definition
+
+@include font-face($base-font-regular-name, $base-font-regular-url, 500, normal, woff2 woff ttf svg);
+
+// @include font-face(
+// 	$base-font-regular-name,
+// 	$base-font-regular-url,
+// 	("ttf", "svg", "woff", "woff2")
+// );
+// @include font-face(
+// 	$base-font-regular-name,
+// 	$base-font-italic-url,
+// 	("ttf", "svg", "woff", "woff2"))
+// 	{
+// 		font-weight: normal;
+// 		font-style: italic;
+// 	}
+// @include font-face(
+// 	$base-font-regular-name,
+// 	$base-font-bold-url,
+// 	("ttf", "svg", "woff", "woff2"))
+// 	{
+// 		font-weight: bold;
+// 	}
+// @include font-face(
+// 	$base-font-regular-name,
+// 	$base-font-bold-italic-url,
+// 	("ttf", "svg", "woff", "woff2"))
+// 	{
+// 		font-style: italic;
+// 		font-weight: bold;
+// 	}
+// @include font-face(
+// 	$base-font-serif-name,
+// 	$base-font-serif-regular-url,
+// 	("ttf", "svg", "woff", "woff2"));
+
+// Headings
+// h1,h2,h3,h4,h5,h6 { 
+// 	font-weight: $theme-fw-normal; 
+// 	font-size: $theme-fs-lg; 
+// 	clear: both;
+// 	color: $theme-color-black;
+// }
+
+// .heading-1 {
+// 	font-size: $theme-fs-bs * 2;
+// }
+
+// .heading-2 { 
+// 	font-family: $font-family-secondary;
+// 	font-size: $theme-fs-bs * 1.8;
+// 	margin-bottom: $theme-fs-bs * 1.6;
+// }
+
+// .heading-3 { 
+// 	font-family: $font-family-base;
+// 	font-size: $theme-fs-bs * 1.2; 
+// 	font-weight: $theme-fw-bold;
+// 	color: $theme-color-white;
+// }
+
+// .heading-4 {
+// 	font-size: $theme-fs-bs * 1.4;
+// }
+
+// .heading-5 {
+// 	font-size: $theme-fs-bs * 1.2;
+// }
+
+// .heading-6 { 
+// 	font-size: $theme-fs-bs;
+// }
+
+
+// Paragraph
+p {	
+	margin-bottom: $spacer-lg;
+	font-weight: $theme-fw-normal;
+	font-size: $theme-fs-bs;
+}
+
+// Small
+small {
+	font-size: $theme-fs-sm;
+}
+
+// Section Title
+.section-title {
+	margin-top: $spacer-xl;
+	margin-bottom: $spacer-xxl;
+	font-size: $theme-fs-xxxl;
+	font-weight: $theme-fw-bold;
+	color: $theme-color-black;
+	line-height: $theme-line-height-min;
+
+	small {
+		display: block;
+		font-family: $font-family-serif;
+		font-size: $theme-fs-lg;
+		font-weight: $theme-fw-normal;
+		color: $theme-color-green;
+	}
+
+	&--green {
+		color: $theme-color-green;
+	}
+}

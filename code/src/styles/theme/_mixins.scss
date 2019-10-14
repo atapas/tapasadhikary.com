@@ -1,0 +1,316 @@
+// --------------------------
+// Mixins
+// --------------------------
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) + px;
+	font-size: $sizeValue + rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+
+
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  box-sizing: $box-model;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+// Single side border-radius
+@mixin border-top-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-top-right-radius: $radius;
+  border-top-right-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-bottom-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  background-clip: padding-box;
+}
+@mixin border-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  border-top-left-radius: $radius;
+  background-clip: padding-box;
+}
+
+
+// Placeholder text color
+@mixin placeholdertext-color($element,$color) {
+  #{$element}::-webkit-input-placeholder {
+    color: $color;
+  }
+
+  #{$element}:-moz-placeholder { /* Firefox 18- */
+    color: $color;
+  }
+
+  #{$element}::-moz-placeholder {  /* Firefox 19+ */
+    color: $color;
+  }
+
+  #{$element}:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin box-size($w, $h:$w) {
+  width: $w;
+  height: $h;
+}
+
+
+
+@mixin box-shadow($a, $b, $c, $color) {
+  -moz-box-shadow: $a $b $c $color;
+  -webkit-box-shadow: $a $b $c $color;
+  box-shadow: $a $b $c $color;
+}
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+  text-shadow: $x $y $blur $color;
+}
+
+@mixin draw-circle($radius, $color) {
+  @include border-radius($radius/2+px);
+  background-color: $color;
+  height:$radius+px;
+  width:$radius+px;
+  -moz-background-clip: padding;     /* Firefox 3.6 */
+  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+  background-clip: padding-box;
+}
+
+// Absolute positioning
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: absolute;
+}
+
+// Centering mixin
+@mixin content-centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50);
+  }
+}
+
+@mixin word-wrap() {
+  word-break:     break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens:    auto;
+  hyphens:         auto;
+}
+
+@mixin ellipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+// Functions
+
+// Black and white
+@function black($opacity){
+    @return rgba(0,0,0,$opacity);
+}
+@function white($opacity){
+    @return rgba(255,255,255,$opacity);
+}
+
+// Text link
+@mixin text-link($color) {
+  position: relative;
+  &:hover {
+    color: darken($color, 25%);
+    border-bottom:solid 1px lighten($color, 50%);
+  }
+}
+
+// Shadow
+@mixin shadow-black-small {
+  @include box-shadow(0, 3px, 4px, rgba(0,0,0,.6));
+}
+
+@mixin text-shadow-none {
+  @include text-shadow(0, 0, 0);
+}
+
+@mixin text-shadow-default {
+  @include text-shadow(3px, 3px, 2px, rgba(0, 0, 0, .4));
+}
+
+@mixin text-shadow-thin {
+  @include text-shadow(2px, 2px, 1px, rgba(0, 0, 0, .4));
+}
+
+// Transitions
+@mixin simple-transition {
+  transition: all .2s ease-in-out;
+}
+
+// Responsive breakpoint mixin
+// ------------------------------
+// Usage:
+// 
+// @include breakpoint(lg) {
+//    <object-property: value>
+// }
+$breakpoint-xl: $screen-xl-min;
+$breakpoint-xxl: $screen-xxl-min;
+$breakpoint-lg: $screen-lg-min;
+$breakpoint-md: $screen-md-min;
+$breakpoint-sm: $screen-sm-min;
+$breakpoint-xsmax: $screen-xs-smax;
+$breakpoint-xs: $screen-xs-max;
+
+
+@mixin breakpoint($width) {
+    @if $width == xxl {
+        @media only screen and (min-width:$breakpoint-xxl) {
+            @content;
+        }
+    }
+    @else if $width == xl {
+        @media only screen and (max-width:$breakpoint-xl) {
+            @content;
+        }
+    }
+    @else if $width == lg {
+        @media only screen and (max-width:$breakpoint-lg) {
+            @content;
+        }
+    }
+    @else if $width == md {
+        @media only screen and (max-width:$breakpoint-md) {
+            @content;
+        }
+    }
+    @else if $width == sm {
+        @media only screen and (max-width:$breakpoint-sm) {
+            @content;
+        }
+    }
+    @else if $width == xsmax {
+        @media only screen and (max-width:$breakpoint-xsmax) {
+            @content;
+        }
+    }
+
+    @else if $width == xs {
+        @media only screen and (max-width:$breakpoint-xs) {
+            @content;
+        }
+    }
+}
