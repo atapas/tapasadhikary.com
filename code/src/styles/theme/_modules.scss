@@ -1,0 +1,288 @@
+// --------------------------
+// Modules
+// --------------------------
+
+// Social Listing
+.list-social {
+    margin: $spacer-md 0 $spacer-xl 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 $spacer-base;
+
+        @include breakpoint(md) {
+            margin: 0 $spacer-xs;
+        }
+
+        a {
+            @include border-radius(50%);
+            @include simple-transition;
+            display: block;
+            width: 76px;
+            height: 76px;
+            border: solid 2px $theme-color-brand;
+            font-size: $theme-fs-lg;
+            line-height: 2.6;
+            color: $theme-color-black;
+
+            &:hover,
+            &:focus {
+                @include simple-transition;
+                background-color: $theme-color-black;
+                color: $theme-color-white;
+                text-decoration: none;
+            }
+
+            @include breakpoint(sm) {
+                width: 64px;
+                height: 64px;
+                font-size: $theme-fs-md;
+            }
+        }
+    }
+}
+
+
+// Project Listing
+.list-project {
+    $thumb-height: 220px;
+
+    & &__item {
+        margin-bottom: $spacer-base;
+        
+        .project {
+            &__thumb {
+                display: block;
+                height: $thumb-height;
+                border: solid 3px $theme-color-grey-light-very;
+                overflow: hidden;
+
+                &:hover,
+                &:focus {
+                    border-color: $theme-color-brand;
+                }
+            }
+            &__title {
+                margin-top: $spacer-base;
+                font-family: $font-family-sans-serif;
+                font-size: $theme-fs-lg;
+                font-weight: $theme-fw-bold;
+                color: $theme-color-black;
+                letter-spacing: -0.02rem;
+
+                a {
+                    color: $theme-color-black;
+
+                    &:hover,
+                    &:focus {
+                        color: $theme-color-brand;
+                        text-decoration: none;
+                    }
+                }
+
+                @include breakpoint(sm) {
+                    font-size: $theme-fs-bsl;
+                }
+            }
+
+            &__desc {
+                font-family: $font-family-sans-serif;
+                font-size: $theme-fs-bs;
+                color: $theme-color-grey-light;
+                font-weight: $theme-fw-bold;
+
+                @include breakpoint(sm) {
+                    font-weight: $theme-fw-normal;
+                }
+            }
+        }
+    }
+}
+
+
+// Page Header
+.page-header {
+    position: relative;
+
+    .img-hero {
+        position: absolute;
+        top: -5%;
+        right: 6%;
+        height: 110%;
+        margin: 0;
+
+        @include breakpoint(md) {
+            right: 0;
+            height: 105%;
+            transform: translateX(10%);
+        }
+
+        @include breakpoint(sm) {
+            top: auto;
+            bottom: 0;
+            transform: translateX(0);
+            height: 60%;
+        }
+    }
+
+    .hero-quote {
+        position: absolute;
+        right: 0;
+        top: 40%;
+        transform: translateY(-50%);
+        text-align: right;
+        
+
+        &:before {
+            @include opacity(.3);
+            @extend .icon;
+            @extend .icon-quote-left;
+            position: relative;
+            top: 24px;
+            font-size: $theme-fs-5x;
+            line-height: 0.5;
+            margin-top: -40px;
+        }
+
+        &:after {
+            @include opacity(.3);
+            position: absolute;
+            right: 0;
+            content:"";
+            display: block;
+            height: 8px;
+            width: 100px;
+            background-color: $theme-color-grey;
+            margin-top: $spacer-base;
+        }
+
+        em {
+            display: block;
+            font-weight: $theme-fw-bold;
+            font-style: normal;
+            font-size: 80px;
+            color: $theme-color-brand;
+            letter-spacing: -0.3rem;
+            line-height: 1;
+
+            &.emp--lg {
+                font-size: 118px;
+                letter-spacing: -0.4rem;
+                margin-top: -46px;
+            }
+        }
+
+        .midline {
+            display: block;
+            font-weight: $theme-fw-bold;
+            font-size: $theme-fs-md;
+            letter-spacing: -0.1rem;
+            text-align: center;
+        }
+
+        @include breakpoint(md) {
+            top: 60%;
+        }
+
+        @include breakpoint(sm) {
+            position: relative;
+            padding-top: $spacer-base;
+            margin: 0 0 0 $spacer-xl;
+            text-align: left;
+
+            &:before {
+                position: absolute;
+                font-size: $theme-fs-lg;
+            }
+
+            &:after {
+                left: 0;
+                height: 2px;
+                width: 40px;
+            }
+
+            em, em.emp--lg, .midline {
+                display: block;
+                margin: 0;
+                font-size: $theme-fs-bsl;
+                letter-spacing: 0;
+                line-height: $theme-line-height-base;
+                text-align: left;
+            }
+
+            em, em.emp--lg {
+                font-size: $theme-fs-lg;
+                line-height: $theme-line-height-small;
+            }
+        }
+    }
+}
+
+// Section Header
+.section-header {
+    position: relative;
+    z-index: 2;
+    padding: $spacer-xxl;
+
+    @include breakpoint(md) {
+        padding: $spacer-xxl 0;
+    }
+
+    @include breakpoint(xsmax) {
+        padding: $spacer-xxl $spacer-xl;
+    }
+
+    .section-title {
+        font-size: $theme-fs-6x;
+
+        @include breakpoint(md) {
+            margin-bottom: $spacer-lg;
+            font-size: $theme-fs-xxxl;
+        }
+    }
+
+    .section-desc {
+        @extend .text-lead;
+        width: 40%;
+
+        @include breakpoint(md) {
+            font-size: $theme-fs-bsl;
+            width: 50%;
+            line-height: $theme-line-height-base;
+        }
+    }
+}
+
+
+
+// Section Featured
+.section-featured {
+    padding: $spacer-xxl $spacer-xxl;
+    background-color: $theme-color-black;
+    color: $theme-color-white;
+
+    &#{&}--primary {
+        background-color: $theme-color-black;
+    }
+    &#{&}--secondary {
+        background-color: $theme-color-brand;
+    }
+
+    .section-title {
+        color: $theme-color-white;
+        text-align: left;
+    }
+
+    .section-desc {
+        @include opacity(.7);
+        font-size: $theme-fs-bsl;
+    }
+}
+
+.section-projects {
+    @extend %clearfix;
+}
