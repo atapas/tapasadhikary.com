@@ -3,7 +3,7 @@
 // --------------------------
 
 // Icon font face definition
-// @include font-face($icon-font-name, $icon-font-url, 500, normal, woff2 woff ttf svg);
+@include font-face($icon-font-name, $icon-font-url, 500, normal, eot woff ttf svg);
 
 [data-icon]:before {
     font-family: $font-family-icon;
@@ -38,6 +38,24 @@
     text-decoration: none;
 }
 
-a > [class*="icon"] {
-  margin-right: .6rem;
+.icon-ellipsis:before {
+    content: "\e905";
+}
+.icon-quote-left:before {
+    content: "\e906";
+}
+.icon-email:before {
+    content: "\e900";
+}
+.icon-instagram:before {
+    content: "\e901";
+}
+.icon-linkedin:before {
+    content: "\e902";
+}
+.icon-facebook:before {
+    content: "\e903";
+}
+.icon-twitter:before {
+    content: "\e904";
 }

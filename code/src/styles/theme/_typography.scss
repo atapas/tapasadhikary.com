@@ -95,16 +95,17 @@ small {
 
 // Section Title
 .section-title {
-	position: relative;
-	margin-top: $spacer-xl;
-	margin-bottom: $spacer-xxl;
-	padding-bottom: $spacer-md;
-	font-size: $theme-fs-xxxl;
+	margin: 0 0 $spacer-lg 0;
+	font-size: $theme-fs-xxl;
 	font-weight: $theme-fw-bold;
 	color: $theme-color-black;
 	line-height: $theme-line-height-min;
 	letter-spacing: -0.1rem;
 	text-align: center;
+
+	@include breakpoint(md) {
+		font-size: $theme-fs-xl;
+	}
 
 	small {
 		display: block;
@@ -114,32 +115,76 @@ small {
 		color: $theme-color-brand;
 	}
 
-	&::before {
-		@include border-radius(50%);
-		content: "";
-		position: absolute;
-		width: 8px;
-		height: 8px;
-		left: 50%;
-		bottom: 0;
-		margin-left: -10px;
-		transform: translateX(-50%);
-		background-color: $theme-color-brand;
+	strong {
+		display: block;
+		font-weight: $theme-fw-bold;
+		color: $theme-color-brand;
 	}
 
-	&::after {
-		content: "";
-		position: absolute;
-		width: 100px;
-		height: 8px;
-		left: 50%;
-		bottom: 0;
-		margin-left: 50px;
-		transform: translateX(-50%);
-		background-color: $theme-color-brand;
+	&--underlined {
+		position: relative;
+		margin-bottom: $spacer-xxl;
+		padding-bottom: $spacer-md;
+		font-size: $theme-fs-xxxl;
+
+		@include breakpoint(md) {
+			font-size: $theme-fs-xxl;
+		}
+
+		@include breakpoint(sm) {
+			font-size: $theme-fs-xl;
+		}
+
+		
+
+		&:before {
+			@extend .icon;
+			@extend .icon-ellipsis;
+			position: absolute;
+			bottom: 4px;
+			line-height: 0 !important;
+			color: $theme-color-brand;
+			font-size: $theme-fs-xl;
+			left: 50%;
+			transform: translateX(-160%);
+		}
+	
+		&::after {
+			@include border-radius(8px);
+			content: "";
+			position: absolute;
+			width: 100px;
+			height: 8px;
+			left: 50%;
+			bottom: 0;
+			transform: translateX(-10%);
+			background-color: $theme-color-brand;
+		}
+
+		&.text-left {
+			&::before {
+				left: 0;
+				margin-left: 0;
+				transform: translateX(0);
+			}
+
+			&::after {
+				left: 0;
+				margin-left: 40px;
+				transform: translateX(0);
+			}
+		}
 	}
 
 	&--green {
 		color: $theme-color-brand;
 	}
+}
+
+// Lead Text
+.text-lead {
+	@extend %clearfix;
+	margin-bottom: $spacer-xl;
+	font-size: $theme-fs-md;
+	color: $theme-color-grey;
 }

@@ -12,7 +12,7 @@ $base-font-serif-regular-url:		'../fonts/text/livvic-regular-webfont';
 // $base-font-serif-bold-url: 			'../fonts/playfairdisplay/PlayfairDisplay-Bold';
 // $base-font-serif-bold-italic-url:	'../fonts/playfairdisplay/PlayfairDisplay-BoldItalic';
 
-$icon-font-url:				'../fonts/icons/theme-icons';
+$icon-font-url:				'../fonts/icon/ta-icons';
 
 // Font Names
 $base-font-regular-name:	'Klima';
@@ -108,8 +108,8 @@ $box-boundary-list: (
 );
 
 // Graphics media
-$theme-image-path:'../img/';
-$theme-main-logo-image: $theme-image-path + 'logo-theme.png';
+$theme-image-path:'../images/';
+// $theme-main-logo-image: $theme-image-path + 'logo-theme.png';
 
 
 // Responsive Breakpoints

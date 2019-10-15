@@ -6,6 +6,7 @@ body {
 	font-family: $font-family-base;
 	font-size: $theme-fs-bs;
 	background: $theme-body-bg;
+	background: url(#{$theme-image-path}bg-paper.jpg) repeat left top;
 	color: $theme-body-fg;
 }
 
@@ -15,4 +16,37 @@ hr {
 	$border-color: lighten($theme-color-black, 10%);
 	border-color: $border-color;
 	position: relative; 
+}
+
+// Buttons
+.btn-raised {
+	@include border-radius(0);
+	height: 60px;
+	padding: $spacer-base $spacer-md;
+	font-weight: $theme-fw-bold;
+	line-height: 1;
+
+	// Default
+	&--default {
+		background-color: $theme-color-black;
+		color: $theme-color-white;
+
+		&:hover,
+		&:focus {
+			background-color: $theme-color-white;
+			color: $theme-color-black;
+		}
+	}
+
+	// Brand 
+	&--brand {
+		background-color: $theme-color-brand;
+		color: $theme-color-white;
+
+		&:hover,
+		&:focus {
+			background-color: $theme-color-white;
+			color: $theme-color-brand;
+		}
+	}
 }

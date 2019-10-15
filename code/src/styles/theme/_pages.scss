@@ -2,6 +2,52 @@
 // Pages
 // --------------------------
 
+// Social Listing
+.list-social {
+    margin: $spacer-md 0 $spacer-xl 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 $spacer-base;
+
+        @include breakpoint(md) {
+            margin: 0 $spacer-xs;
+        }
+
+        a {
+            @include border-radius(50%);
+            @include simple-transition;
+            display: block;
+            width: 76px;
+            height: 76px;
+            border: solid 2px $theme-color-brand;
+            font-size: $theme-fs-lg;
+            line-height: 2.6;
+            color: $theme-color-black;
+
+            &:hover,
+            &:focus {
+                @include simple-transition;
+                background-color: $theme-color-black;
+                color: $theme-color-white;
+                text-decoration: none;
+            }
+
+            @include breakpoint(sm) {
+                width: 64px;
+                height: 64px;
+                font-size: $theme-fs-md;
+            }
+        }
+    }
+}
+
+
+// Project Listing
 .list-project {
     $thumb-height: 220px;
 
@@ -14,6 +60,11 @@
                 height: $thumb-height;
                 border: solid 3px $theme-color-grey-light-very;
                 overflow: hidden;
+
+                &:hover,
+                &:focus {
+                    border-color: $theme-color-brand;
+                }
             }
             &__title {
                 margin-top: $spacer-base;
@@ -25,6 +76,12 @@
 
                 a {
                     color: $theme-color-black;
+
+                    &:hover,
+                    &:focus {
+                        color: $theme-color-brand;
+                        text-decoration: none;
+                    }
                 }
             }
 
@@ -36,4 +93,146 @@
             }
         }
     }
+}
+
+
+// Page Header
+.page-header {
+    position: relative;
+
+    .img-hero {
+        position: absolute;
+        top: 0;
+        right: 6%;
+        height: 110%;
+
+        @include breakpoint(md) {
+            right: 0;
+            height: 100%;
+            transform: translateX(10%);
+        }
+    }
+
+    .hero-quote {
+        position: absolute;
+        right: 0;
+        top: 40%;
+        transform: translateY(-50%);
+        text-align: right;
+        
+
+        &:before {
+            @include opacity(.3);
+            @extend .icon;
+            @extend .icon-quote-left;
+            position: relative;
+            top: 24px;
+            font-size: $theme-fs-5x;
+            line-height: 0.5;
+            margin-top: -40px;
+        }
+
+        &:after {
+            @include opacity(.3);
+            position: absolute;
+            right: 0;
+            content:"";
+            display: block;
+            height: 8px;
+            width: 100px;
+            background-color: $theme-color-grey;
+            margin-top: $spacer-base;
+        }
+
+        em {
+            display: block;
+            font-weight: $theme-fw-bold;
+            font-style: normal;
+            font-size: 80px;
+            color: $theme-color-brand;
+            letter-spacing: -0.3rem;
+            line-height: 1;
+
+            &.emp--lg {
+                font-size: 118px;
+                letter-spacing: -0.4rem;
+                margin-top: -46px;
+            }
+        }
+
+        .midline {
+            display: block;
+            font-weight: $theme-fw-bold;
+            font-size: $theme-fs-md;
+            letter-spacing: -0.1rem;
+            text-align: center;
+        }
+
+        @include breakpoint(md) {
+            top: 60%;
+        }
+    }
+}
+
+// Section Header
+.section-header {
+    position: relative;
+    z-index: 2;
+    padding: $spacer-xxl;
+
+    @include breakpoint(md) {
+        padding: $spacer-xxl 0;
+    }
+
+    @include breakpoint(xsmax) {
+        padding: $spacer-xxl $spacer-xl;
+    }
+
+    .section-title {
+        font-size: $theme-fs-6x;
+
+        @include breakpoint(md) {
+            margin-bottom: $spacer-lg;
+            font-size: $theme-fs-xxxl;
+        }
+    }
+
+    .section-desc {
+        @extend .text-lead;
+        width: 40%;
+
+        @include breakpoint(md) {
+            font-size: $theme-fs-bsl;
+        }
+    }
+}
+
+
+
+// Section Featured
+.section-featured {
+    padding: $spacer-xxl $spacer-xxl;
+    background-color: $theme-color-black;
+    color: $theme-color-white;
+
+    &#{&}--primary {
+        background-color: $theme-color-black;
+    }
+    &#{&}--secondary {
+        background-color: $theme-color-brand;
+    }
+
+    .section-title {
+        color: $theme-color-white;
+        text-align: left;
+    }
+
+    .section-desc {
+        @include opacity(.7);
+        font-size: $theme-fs-bsl;
+    }
+}
+
+.section-projects {
+    @extend %clearfix;
 }
