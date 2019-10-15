@@ -268,6 +268,7 @@ $breakpoint-md: $screen-md-min;
 $breakpoint-sm: $screen-sm-min;
 $breakpoint-xsmax: $screen-xs-smax;
 $breakpoint-xs: $screen-xs-max;
+$breakpoint-xxs: $screen-xxs;
 
 
 @mixin breakpoint($width) {
@@ -307,4 +308,10 @@ $breakpoint-xs: $screen-xs-max;
             @content;
         }
     }
+
+    @else if $width == xxs {
+      @media only screen and (max-width:$breakpoint-xxs) {
+          @content;
+      }
+  }
 }

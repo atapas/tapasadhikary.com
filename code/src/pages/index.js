@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
-import HeroImage from "../images/photo-tapas.png"
+import HeroImage from "../images/photo-tapas2.png"
 import SEO from "../components/seo"
 
 import 'bootstrap/dist/css/bootstrap.min.css';

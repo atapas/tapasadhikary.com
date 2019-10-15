@@ -42,6 +42,13 @@
                 height: 64px;
                 font-size: $theme-fs-md;
             }
+
+            @include breakpoint(xs) {
+                width: 48px;
+                height: 48px;
+                font-size: $theme-fs-bs;
+                line-height: 2.8;
+            }
         }
     }
 }
@@ -111,13 +118,17 @@
     .img-hero {
         position: absolute;
         top: -5%;
-        right: 6%;
-        height: 110%;
+        right: 10%;
+        height: 120%;
         margin: 0;
+
+        @include breakpoint(lg) {
+            height: 100%;
+        }
 
         @include breakpoint(md) {
             right: 0;
-            height: 105%;
+            height: 100%;
             transform: translateX(10%);
         }
 
@@ -127,12 +138,19 @@
             transform: translateX(0);
             height: 60%;
         }
+
+        @include breakpoint(xs) {
+            top: auto;
+            bottom: 0;
+            transform: translateX(0);
+            height: 40%;
+        }
     }
 
     .hero-quote {
         position: absolute;
         right: 0;
-        top: 40%;
+        top: 60%;
         transform: translateY(-50%);
         text-align: right;
         
@@ -185,7 +203,30 @@
         }
 
         @include breakpoint(md) {
-            top: 60%;
+            top: 90%;
+            transform: translateY(-120%);
+
+            &:before {
+                font-size: $theme-fs-xl;
+                margin-top: -40px;
+                top: 0;
+            }
+
+            &:after {
+                height: 3px;
+            }
+            
+            em, em.emp--lg, .midline {
+                display: block;
+                margin: 0;
+                font-size: $theme-fs-xl;
+                letter-spacing: 0;
+                line-height: 1;
+            }
+
+            .midline {
+                font-size: $theme-fs-md;
+            }
         }
 
         @include breakpoint(sm) {
@@ -193,9 +234,12 @@
             padding-top: $spacer-base;
             margin: 0 0 0 $spacer-xl;
             text-align: left;
+            transform: translateY(-50%);
 
             &:before {
                 position: absolute;
+                top: auto;
+                margin-top: -20px;
                 font-size: $theme-fs-lg;
             }
 
@@ -243,6 +287,14 @@
             margin-bottom: $spacer-lg;
             font-size: $theme-fs-xxxl;
         }
+
+        @include breakpoint(xsmax) {
+            font-size: $theme-fs-xxl;
+        }
+
+        @include breakpoint(xxs) {
+            font-size: $theme-fs-xl;
+        }
     }
 
     .section-desc {
@@ -253,6 +305,11 @@
             font-size: $theme-fs-bsl;
             width: 50%;
             line-height: $theme-line-height-base;
+        }
+
+        @include breakpoint(xs) {
+            width: 100%;
+            font-size: $theme-fs-bs;
         }
     }
 }
