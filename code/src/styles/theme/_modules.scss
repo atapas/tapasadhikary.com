@@ -42,6 +42,13 @@
                 height: 64px;
                 font-size: $theme-fs-md;
             }
+
+            @include breakpoint(xs) {
+                width: 48px;
+                height: 48px;
+                font-size: $theme-fs-bs;
+                line-height: 2.8;
+            }
         }
     }
 }
@@ -126,6 +133,13 @@
             bottom: 0;
             transform: translateX(0);
             height: 60%;
+        }
+
+        @include breakpoint(xs) {
+            top: auto;
+            bottom: 0;
+            transform: translateX(0);
+            height: 40%;
         }
     }
 
@@ -243,6 +257,14 @@
             margin-bottom: $spacer-lg;
             font-size: $theme-fs-xxxl;
         }
+
+        @include breakpoint(xsmax) {
+            font-size: $theme-fs-xxl;
+        }
+
+        @include breakpoint(xxs) {
+            font-size: $theme-fs-xl;
+        }
     }
 
     .section-desc {
@@ -253,6 +275,11 @@
             font-size: $theme-fs-bsl;
             width: 50%;
             line-height: $theme-line-height-base;
+        }
+
+        @include breakpoint(xs) {
+            width: 100%;
+            font-size: $theme-fs-bs;
         }
     }
 }
