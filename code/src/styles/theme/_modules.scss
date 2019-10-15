@@ -1,5 +1,5 @@
 // --------------------------
-// Pages
+// Modules
 // --------------------------
 
 // Social Listing
@@ -83,6 +83,10 @@
                         text-decoration: none;
                     }
                 }
+
+                @include breakpoint(sm) {
+                    font-size: $theme-fs-bsl;
+                }
             }
 
             &__desc {
@@ -90,6 +94,10 @@
                 font-size: $theme-fs-bs;
                 color: $theme-color-grey-light;
                 font-weight: $theme-fw-bold;
+
+                @include breakpoint(sm) {
+                    font-weight: $theme-fw-normal;
+                }
             }
         }
     }
@@ -102,14 +110,22 @@
 
     .img-hero {
         position: absolute;
-        top: 0;
+        top: -5%;
         right: 6%;
         height: 110%;
+        margin: 0;
 
         @include breakpoint(md) {
             right: 0;
-            height: 100%;
+            height: 105%;
             transform: translateX(10%);
+        }
+
+        @include breakpoint(sm) {
+            top: auto;
+            bottom: 0;
+            transform: translateX(0);
+            height: 60%;
         }
     }
 
@@ -171,6 +187,38 @@
         @include breakpoint(md) {
             top: 60%;
         }
+
+        @include breakpoint(sm) {
+            position: relative;
+            padding-top: $spacer-base;
+            margin: 0 0 0 $spacer-xl;
+            text-align: left;
+
+            &:before {
+                position: absolute;
+                font-size: $theme-fs-lg;
+            }
+
+            &:after {
+                left: 0;
+                height: 2px;
+                width: 40px;
+            }
+
+            em, em.emp--lg, .midline {
+                display: block;
+                margin: 0;
+                font-size: $theme-fs-bsl;
+                letter-spacing: 0;
+                line-height: $theme-line-height-base;
+                text-align: left;
+            }
+
+            em, em.emp--lg {
+                font-size: $theme-fs-lg;
+                line-height: $theme-line-height-small;
+            }
+        }
     }
 }
 
@@ -203,6 +251,8 @@
 
         @include breakpoint(md) {
             font-size: $theme-fs-bsl;
+            width: 50%;
+            line-height: $theme-line-height-base;
         }
     }
 }

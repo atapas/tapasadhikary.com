@@ -18,7 +18,12 @@ hr {
 	position: relative; 
 }
 
+
+// --------------------------
 // Buttons
+// --------------------------
+
+// Button - Raised
 .btn-raised {
 	@include border-radius(0);
 	height: 60px;

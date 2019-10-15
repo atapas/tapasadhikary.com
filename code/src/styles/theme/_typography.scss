@@ -10,77 +10,6 @@
 @include font-face($base-font-regular-name, $base-font-bold-url, 700, normal, woff2 woff ttf svg);
 @include font-face($base-font-regular-name, $base-font-bold-italic-url, 700, italic, woff2 woff ttf svg);
 
-// @include font-face(
-// 	$base-font-regular-name,
-// 	$base-font-regular-url,
-// 	("ttf", "svg", "woff", "woff2")
-// );
-// @include font-face(
-// 	$base-font-regular-name,
-// 	$base-font-italic-url,
-// 	("ttf", "svg", "woff", "woff2"))
-// 	{
-// 		font-weight: normal;
-// 		font-style: italic;
-// 	}
-// @include font-face(
-// 	$base-font-regular-name,
-// 	$base-font-bold-url,
-// 	("ttf", "svg", "woff", "woff2"))
-// 	{
-// 		font-weight: bold;
-// 	}
-// @include font-face(
-// 	$base-font-regular-name,
-// 	$base-font-bold-italic-url,
-// 	("ttf", "svg", "woff", "woff2"))
-// 	{
-// 		font-style: italic;
-// 		font-weight: bold;
-// 	}
-// @include font-face(
-// 	$base-font-serif-name,
-// 	$base-font-serif-regular-url,
-// 	("ttf", "svg", "woff", "woff2"));
-
-// Headings
-// h1,h2,h3,h4,h5,h6 { 
-// 	font-weight: $theme-fw-normal; 
-// 	font-size: $theme-fs-lg; 
-// 	clear: both;
-// 	color: $theme-color-black;
-// }
-
-// .heading-1 {
-// 	font-size: $theme-fs-bs * 2;
-// }
-
-// .heading-2 { 
-// 	font-family: $font-family-secondary;
-// 	font-size: $theme-fs-bs * 1.8;
-// 	margin-bottom: $theme-fs-bs * 1.6;
-// }
-
-// .heading-3 { 
-// 	font-family: $font-family-base;
-// 	font-size: $theme-fs-bs * 1.2; 
-// 	font-weight: $theme-fw-bold;
-// 	color: $theme-color-white;
-// }
-
-// .heading-4 {
-// 	font-size: $theme-fs-bs * 1.4;
-// }
-
-// .heading-5 {
-// 	font-size: $theme-fs-bs * 1.2;
-// }
-
-// .heading-6 { 
-// 	font-size: $theme-fs-bs;
-// }
-
-
 // Paragraph
 p {	
 	margin-bottom: $spacer-lg;
@@ -132,6 +61,7 @@ small {
 		}
 
 		@include breakpoint(sm) {
+			margin-bottom: $spacer-md;
 			font-size: $theme-fs-xl;
 		}
 
@@ -147,6 +77,10 @@ small {
 			font-size: $theme-fs-xl;
 			left: 50%;
 			transform: translateX(-160%);
+
+			@include breakpoint(sm) {
+				font-size: $theme-fs-lg;
+			}
 		}
 	
 		&::after {
@@ -159,6 +93,13 @@ small {
 			bottom: 0;
 			transform: translateX(-10%);
 			background-color: $theme-color-brand;
+
+			@include breakpoint(sm) {
+				height: 5px;
+				width: 60px;
+				bottom: 2px;
+				transform: translateX(-20%);
+			}
 		}
 
 		&.text-left {
@@ -172,6 +113,10 @@ small {
 				left: 0;
 				margin-left: 40px;
 				transform: translateX(0);
+
+				@include breakpoint(sm) {
+					margin-left: 30px;
+				}
 			}
 		}
 	}
