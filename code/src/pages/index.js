@@ -42,6 +42,7 @@ const IndexPage = () => (
               <li><a href="#"><i className="icon icon-facebook"></i><span className="sr-only">see facebook</span></a></li>
               <li><a href="#"><i className="icon icon-linkedin"></i><span className="sr-only">check linkedin</span></a></li>
               <li><a href="#"><i className="icon icon-instagram"></i><span className="sr-only">view instagram</span></a></li>
+              <li><a href="#"><i className="icon icon-hashnode"></i><span className="sr-only">view hashnode</span></a></li>
               <li><a href="#"><i className="icon icon-email"></i><span className="sr-only">send email</span></a></li>
             </ul>
           </section>
