@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `tapasadhikary.com: Knowledge Gained === Knowledge Shared!`,
+    title: `Knowledge Shared === Knowledge Gained!`,
     description: `Personal website for @tapasadhikary`,
     author: `@gatsbyjs`,
   },
