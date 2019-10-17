@@ -6,30 +6,35 @@ import imageclassific from "../images/projects/imageclassification.jpg";
 
 export const projects = [
     {
+        'id': 1,
         'cover': nanny,
         'title': 'Nanny Plum',
         'link': 'https://github.com/atapas/nanny-plum',
         'description': 'A Fun Project to use Google Cloud API(Text to Speech) from Flutter. Do you know what? I have been using it at my home for a while now!'
     },
     {
+        'id': 2,
         'cover': thoughthoroscope,
         'title': 'Thought Horoscope',
         'link': 'https://github.com/atapas/thought-horoscope',
         'description': 'thought-horoscope is a tool to know your Horoscope for Today, Month, Week or Year. The tool works on node-cli(Command Line Interface).'
     },
     {
+        'id': 3,
         'cover': testcap,
         'title': 'Test Cap',
         'link': 'https://github.com/atapas/testcap',
         'description': 'Project to demonstrate the usage of Coolest JavaScript Test Framework called, Jest.'
     },
     {
+        'id': 4,
         'cover': prediction,
         'title': 'Prediction App',
         'link': 'https://github.com/atapas/horoscope-app',
         'description': 'A Flutter project to build an app that has basic layout, routing and server communication over REST APIs. What would be better than knowing your Horoscope in real!'
     },
     {
+        'id': 5,
         'cover': imageclassific,
         'title': 'ML - Image Classification in Browser',
         'link': 'https://github.com/atapas/ml-greenroots',
