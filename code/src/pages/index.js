@@ -1,18 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
-import HeroImage from "../images/photo-tapas2.png"
-import SEO from "../components/seo"
+import React from "react";
+import HeroImage from "../images/photo-tapas2.png";
+import SEO from "../components/seo";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import "../styles/index.scss";
+
+import Social from '../components/social';
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" />
+    <SEO title="Tapas Adhikary" />
     <div className="container">
       <header className="page-header">
         <div className="section-header">
@@ -37,14 +34,7 @@ const IndexPage = () => (
             </section>
           </div>
           <section className="section-social spacer-in-top-xxl">
-            <ul className="list-social">
-              <li><a href="#"><i className="icon icon-twitter"></i><span className="sr-only">read my tweets</span></a></li>
-              <li><a href="#"><i className="icon icon-facebook"></i><span className="sr-only">see facebook</span></a></li>
-              <li><a href="#"><i className="icon icon-linkedin"></i><span className="sr-only">check linkedin</span></a></li>
-              <li><a href="#"><i className="icon icon-instagram"></i><span className="sr-only">view instagram</span></a></li>
-              <li><a href="#"><i className="icon icon-hashnode"></i><span className="sr-only">view hashnode</span></a></li>
-              <li><a href="#"><i className="icon icon-email"></i><span className="sr-only">send email</span></a></li>
-            </ul>
+            <Social />
           </section>
           <section className="section-projects spacer-in-top-xxl">
             <h2 className="section-title section-title--underlined">Experiments</h2>
