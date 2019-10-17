@@ -1,0 +1,38 @@
+import nanny from "../images/projects/nanny.png";
+import thoughthoroscope from "../images/projects/thought-horoscope.png";
+import testcap from "../images/projects/testcap.png";
+import prediction from "../images/projects/prediction.png";
+import imageclassific from "../images/projects/imageclassification.jpg";
+
+export const projects = [
+    {
+        'cover': nanny,
+        'title': 'Nanny Plum',
+        'link': 'https://github.com/atapas/nanny-plum',
+        'description': 'A Fun Project to use Google Cloud API(Text to Speech) from Flutter. Do you know what? I have been using it at my home for a while now!'
+    },
+    {
+        'cover': thoughthoroscope,
+        'title': 'Thought Horoscope',
+        'link': 'https://github.com/atapas/thought-horoscope',
+        'description': 'thought-horoscope is a tool to know your Horoscope for Today, Month, Week or Year. The tool works on node-cli(Command Line Interface).'
+    },
+    {
+        'cover': testcap,
+        'title': 'Test Cap',
+        'link': 'https://github.com/atapas/testcap',
+        'description': 'Project to demonstrate the usage of Coolest JavaScript Test Framework called, Jest.'
+    },
+    {
+        'cover': prediction,
+        'title': 'Prediction App',
+        'link': 'https://github.com/atapas/horoscope-app',
+        'description': 'A Flutter project to build an app that has basic layout, routing and server communication over REST APIs. What would be better than knowing your Horoscope in real!'
+    },
+    {
+        'cover': imageclassific,
+        'title': 'ML - Image Classification in Browser',
+        'link': 'https://github.com/atapas/ml-greenroots',
+        'description': 'is a Pet-Project to code Machine Learning in the Browser using various Libraries and Frameworks available. The primary intestion is to have fun with some learning around it!'
+    }
+];
