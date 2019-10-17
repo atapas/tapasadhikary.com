@@ -1,10 +1,10 @@
 import React from "react";
-import HeroImage from "../images/photo-tapas2.png";
 import SEO from "../components/seo";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/index.scss";
 
+import Header from '../components/header';
 import Featured from '../components/featured';
 import Social from '../components/social';
 
@@ -27,14 +27,7 @@ const IndexPage = () => {
   <>
     <SEO title="Tapas Adhikary" />
     <div className="container">
-      <header className="page-header">
-        <div className="section-header">
-          <h1 className="section-title section-title--underlined text-left"><strong>Tapas</strong> Adhikary</h1>
-          <p className="section-desc">Ut at pharetra mauris, eget cursus mauris. Pellentesque faucibus elit in maximus tincidunt  nunc.</p>
-        </div>
-        <img src={ HeroImage } className="img-hero"/>
-        <blockquote className="hero-quote"><em>Sharing</em> <span className="midline">is the only way to</span> <em className="emp--lg">learn</em></blockquote>
-      </header>
+      <Header />
       <main>
         <article>
           <div className="row">
