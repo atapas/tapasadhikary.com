@@ -3,7 +3,7 @@ import React from "react";
 const IconLink = props => {
     const href = props.href;
     const text = props.text;
-    const style = props.style;
+    const style = props.styles;
     return (
         <a 
             href = { href }

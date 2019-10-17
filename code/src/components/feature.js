@@ -1,6 +1,6 @@
 import React from "react";
 
-const Featured = props => {
+const Feature = props => {
     const isPrimary = props.primary ? true : false;
     const title = props.data.title;
     const description = props.data.description;
@@ -30,4 +30,4 @@ const Featured = props => {
     )
 };
 
-export default Featured;
+export default Feature;
