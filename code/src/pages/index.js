@@ -5,9 +5,25 @@ import SEO from "../components/seo";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../styles/index.scss";
 
+import Featured from '../components/featured';
 import Social from '../components/social';
 
-const IndexPage = () => (
+
+const IndexPage = () => {
+  const primaryFeatureData = {
+    'title': 'Blogger',
+    'description': 'Technical Blogging is my Passion. I hope you will find something worth looking at or reading. My blog page is just a click away!',
+    'link': 'https://blog.greenroots.info',
+    'linkText': 'See what I blog'
+  }
+  const secondaryFeatureData = {
+    'title': 'Mentor',
+    'description': "As the saying goes, 'The greatest mentor is who Inspires!'. It is also an avenue to gain knowledge. Mentoring is Fun. ",
+    'link': 'https://mentorcruise.com/mentor/TapasAdhikary/',
+    'linkText': 'See what I mentor'
+  }
+
+  return(
   <>
     <SEO title="Tapas Adhikary" />
     <div className="container">
@@ -16,22 +32,14 @@ const IndexPage = () => (
           <h1 className="section-title section-title--underlined text-left"><strong>Tapas</strong> Adhikary</h1>
           <p className="section-desc">Ut at pharetra mauris, eget cursus mauris. Pellentesque faucibus elit in maximus tincidunt  nunc.</p>
         </div>
-        <img src={HeroImage} className="img-hero"/>
+        <img src={ HeroImage } className="img-hero"/>
         <blockquote className="hero-quote"><em>Sharing</em> <span className="midline">is the only way to</span> <em className="emp--lg">learn</em></blockquote>
       </header>
       <main>
         <article>
           <div className="row">
-            <section className="col-md-6 section-featured section-featured--primary">
-              <h2 className="section-title">Blogger</h2>
-              <p className="section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum accumsan purus at rutrum.</p>
-              <a href="#" className="btn btn-raised btn-raised--brand">See what I wrote</a>
-            </section>
-            <section className="col-md-6 section-featured section-featured--secondary">
-              <h2 className="section-title">Mentor</h2>
-              <p className="section-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vestibulum accumsan purus at rutrum.</p>
-              <a href="#" className="btn btn-raised btn-raised--default">See what I mentor</a>
-            </section>
+            <Featured primary = { true } data = { primaryFeatureData }></Featured>
+            <Featured primary = { false} data = { secondaryFeatureData }></Featured>
           </div>
           <section className="section-social spacer-in-top-xxl">
             <Social />
@@ -73,7 +81,8 @@ const IndexPage = () => (
       </main>
     </div>
   </>
+  )
  
-)
+}
 
 export default IndexPage

@@ -1,25 +1,27 @@
 import React from "react";
 
+import IconLink from './iconLink';
+
 const Social = () => {
     return (
         <ul className="list-social">
             <li>
-                <a href="https://twitter.com/tapasadhikary" target="_blank" rel="noopener noreferrer"><i className="icon icon-twitter"></i><span className="sr-only">read my tweets</span></a>
+                <IconLink href="https://twitter.com/tapasadhikary" style="icon icon-twitter" text="read my tweets"></IconLink>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/tapasadhikary/" target="_blank" rel="noopener noreferrer"><i className="icon icon-linkedin"></i><span className="sr-only">check linkedin</span></a>
+                <IconLink href="https://www.linkedin.com/in/tapasadhikary/" style="icon icon-linkedin" text="check linkedin"></IconLink>
             </li>
             <li>
-                <a href="https://hashnode.com/@atapas" target="_blank" rel="noopener noreferrer"><i className="icon icon-hashnode"></i><span className="sr-only">view hashnode</span></a>
+                <IconLink href="https://hashnode.com/@atapas" style="icon icon-hashnode"  text="view hashnode"></IconLink>
             </li>
             <li>
-                <a href="https://www.facebook.com/tapasadhi" target="_blank" rel="noopener noreferrer"><i className="icon icon-facebook"></i><span className="sr-only">see facebook</span></a>
+                <IconLink href="https://www.facebook.com/tapasadhi" style="icon icon-facebook"  text="see facebook"></IconLink>
             </li>
             <li>
-                <a href="https://www.instagram.com/greenroots.info/" target="_blank" rel="noopener noreferrer"><i className="icon icon-instagram"></i><span className="sr-only">view instagram</span></a>
+                <IconLink href="https://www.instagram.com/greenroots.info/" style="icon icon-instagram"  text="view instagram"></IconLink>
             </li>
             <li>
-                <a href="mailto:greenroots2019@gmail.com"><i className="icon icon-email"></i><span className="sr-only">send email</span></a>
+                <IconLink href="mailto:greenroots2019@gmail.com" style="icon icon-email"  text="send email"></IconLink>
             </li>
         </ul>
     )
