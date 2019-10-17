@@ -1,42 +1,18 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from "react";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+import HeroImage from "../images/photo-tapas2.png";
+
+const Header = props => (
+  <header className="page-header">
+    <div className="section-header">
+      <h1 className="section-title section-title--underlined text-left"><strong>Tapas</strong> Adhikary</h1>
+      <p className="section-desc">
+      &#9757; UI/UX Enthusiast | &#128187; Work @MicroFocus | ✍️ Blogger | 👨‍🏫 Mentor | &#127908; Speaker | &#127839; Foodie
+      </p>
     </div>
+    <img src={ HeroImage } alt="Main" className="img-hero"/>
+    <blockquote className="hero-quote"><em>Sharing</em> <span className="midline">is the only way to</span> <em className="emp--lg">learn</em></blockquote>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
