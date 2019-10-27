@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Knowledge Shared === Knowledge Gained!`,
+    siteUrl: `https://www.tapasadhikary.com`,
     description: `Personal website for @tapasadhikary`,
-    author: `@gatsbyjs`,
+    author: `@tapasadhikary`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,6 +15,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     {
