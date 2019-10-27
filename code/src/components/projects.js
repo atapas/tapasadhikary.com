@@ -3,7 +3,7 @@ import thoughthoroscope from "../images/projects/thought-horoscope.png";
 import testcap from "../images/projects/testcap.png";
 import prediction from "../images/projects/prediction.png";
 import imageclassific from "../images/projects/imageclassification.jpg";
-import metaproges6 from "../images/projects/es6metaprog.jpg";
+import metaproges6 from "../images/projects/es6metaprog.png";
 
 export const projects = [
     {
@@ -46,6 +46,6 @@ export const projects = [
         'cover': metaproges6,
         'title': 'JavaScript Metaprogramming',
         'link': 'https://github.com/atapas/js-mtprog',
-        'description': 'Metaprogramming is not new. However it is of less use when comes to JavaScript. Here are some sample to showcase the strength of Metaprogramming in JavaScript using ES6 Symbol, Proxy, Reflection etc.'
+        'description': 'Metaprogramming is not new. However it is of less use when comes to JavaScript. Here are some samples to showcase the strength of Metaprogramming in JavaScript using ES6 Symbol, Proxy, Reflection etc.'
     }
 ];
