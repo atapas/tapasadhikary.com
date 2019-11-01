@@ -7,7 +7,7 @@ const Header = props => (
     <div className="section-header">
       <h1 className="section-title section-title--underlined text-left"><strong>Tapas</strong> Adhikary</h1>
       <p className="section-desc">
-      &#9757; UI/UX Enthusiast | &#128187; Work @MicroFocus | ✍️ Blogger | 👨‍🏫 Mentor | &#127908; Speaker | &#127839; Foodie
+      &#9757; UI/UX Enthusiast | &#128187; Work @MicroFocus | ✍️ Blogger | 👨‍🏫 Mentor @MentorCruise | &#127908; Speaker | &#127839; Foodie
       </p>
     </div>
     <img src={ HeroImage } alt="Main" className="img-hero"/>
