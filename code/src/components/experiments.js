@@ -12,14 +12,7 @@ const Experiments = () => {
             <div className="row list-project">
                 {
                     projects.map((project) => 
-                    <Experiment 
-                            key={ project.id }
-                            cover = { project.cover } 
-                            title = { project.title } 
-                            gitLink = { project.gitLink } 
-                            demoLink = { project.demoLink } 
-                            description = { project.description } >
-                    </Experiment>
+                        <Experiment key= { project.id } project={ project } />
                     )
                 }
             </div>

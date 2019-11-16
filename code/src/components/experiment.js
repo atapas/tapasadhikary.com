@@ -1,11 +1,13 @@
 import React from 'react';
 
 const Experiment = props => {
-    const cover = props.cover;
-    const title = props.title;
-    const demoLink = props.demoLink;
-    const gitLink = props.gitLink;
-    const description = props.description;
+    const cover = props.project.cover;
+    const title = props.project.title;
+    const demoLink = props.project.demoLink;
+    const gitLink = props.project.gitLink;
+    const description = props.project.description;
+    const tags = props.project.tags;
+    console.log(tags);
     return (
         <div className="col-md-6 col-lg-4 list-project__item">
             <a href={ demoLink } className="project__thumb" target = "_blank" 
@@ -18,11 +20,20 @@ const Experiment = props => {
             </h3>
             <p className="project__desc">{ description }</p>
             <div className="tags">
-                <a href="#" rel="tag">vue</a>
-                <a href="#" rel="tag">ember</a>
-                <a href="#" rel="tag">netlify</a>
-                <a href="#" rel="tag">gatsby</a>
+                {
+                    tags.map((tag) => 
+                        <a 
+                            key = { tag.name } 
+                            href={ tag.link } 
+                            target = "_blank"
+                            rel="tag noopener noreferrer">
+                            { tag.name }
+                        </a>   
+                    )
+                }
+                
             </div>
+            
         </div>
     )
 };
