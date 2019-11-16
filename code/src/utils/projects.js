@@ -10,42 +10,48 @@ export const projects = [
         'id': 1,
         'cover': nanny,
         'title': 'Nanny Plum',
-        'link': 'https://github.com/atapas/nanny-plum',
+        'gitLink': 'https://github.com/atapas/nanny-plum',
+        'demoLink': 'https://youtu.be/yakMYpcgED0',
         'description': 'A Fun Project to use Google Cloud API(Text to Speech) from Flutter. Do you know what? I have been using it at my home for a while now!'
     },
     {
         'id': 2,
         'cover': thoughthoroscope,
         'title': 'Thought Horoscope',
-        'link': 'https://github.com/atapas/thought-horoscope',
+        'gitLink': 'https://github.com/atapas/thought-horoscope',
+        'demoLink': 'https://github.com/atapas/thought-horoscope',
         'description': 'thought-horoscope is a tool to know your Horoscope for Today, Month, Week or Year. The tool works on node-cli(Command Line Interface).'
     },
     {
         'id': 3,
         'cover': testcap,
         'title': 'Test Cap',
-        'link': 'https://github.com/atapas/testcap',
+        'gitLink': 'https://github.com/atapas/testcap',
+        'demoLink': 'https://github.com/atapas/testcap',
         'description': 'Project to demonstrate the usage of Coolest JavaScript Test Framework called, Jest.'
     },
     {
         'id': 4,
         'cover': prediction,
         'title': 'Prediction App',
-        'link': 'https://github.com/atapas/horoscope-app',
+        'gitLink': 'https://github.com/atapas/horoscope-app',
+        'demoLink': 'https://youtu.be/ZLYFX18TQCA',
         'description': 'A Flutter project to build an app that has basic layout, routing and server communication over REST APIs. What would be better than knowing your Horoscope in real!'
     },
     {
         'id': 5,
         'cover': imageclassific,
         'title': 'ML - Image Classification in Browser',
-        'link': 'https://github.com/atapas/ml-greenroots',
+        'gitLink': 'https://github.com/atapas/ml-greenroots',
+        'demoLink': 'https://ml-greenroots-info.netlify.com/ML5ImageClassification/',
         'description': 'is a Pet-Project to code Machine Learning in the Browser using various Libraries and Frameworks available. The primary intestion is to have fun with some learning around it!'
     },
     {
         'id': 6,
         'cover': metaproges6,
         'title': 'JavaScript Metaprogramming',
-        'link': 'https://github.com/atapas/js-mtprog',
+        'gitLink': 'https://github.com/atapas/js-mtprog',
+        'demoLink': 'http://bit.ly/js-lovers-metaprog',
         'description': 'Metaprogramming is not new. However it is of less use when comes to JavaScript. Here are some samples to showcase the strength of Metaprogramming in JavaScript using ES6 Symbol, Proxy, Reflection etc.'
     }
 ];

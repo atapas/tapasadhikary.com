@@ -16,7 +16,8 @@ const Experiments = () => {
                             key={ project.id }
                             cover = { project.cover } 
                             title = { project.title } 
-                            link = { project.link } 
+                            gitLink = { project.gitLink } 
+                            demoLink = { project.demoLink } 
                             description = { project.description } >
                     </Experiment>
                     )
