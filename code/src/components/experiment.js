@@ -13,8 +13,15 @@ const Experiment = props => {
             </a>
             <h3 className="project__title">
                 <a href={ link } target = "_blank" rel = "noopener noreferrer">{ title }</a>
+                <a href={ link } target = "_blank" rel = "noopener noreferrer" className="project__title--media spacer-in-left-sm"><i class="icon icon-github"></i></a>
             </h3>
             <p className="project__desc">{ description }</p>
+            <div className="tags">
+                <a href="#" rel="tag">vue</a>
+                <a href="#" rel="tag">ember</a>
+                <a href="#" rel="tag">netlify</a>
+                <a href="#" rel="tag">gatsby</a>
+            </div>
         </div>
     )
 };
