@@ -4,6 +4,7 @@ import testcap from "../images/projects/testcap.png";
 import prediction from "../images/projects/prediction.png";
 import imageclassific from "../images/projects/imageclassification.jpg";
 import metaproges6 from "../images/projects/es6metaprog.png";
+import todojexiareact from "../images/projects/todojexiareact.gif";
 
 export const projects = [
     {
@@ -123,6 +124,24 @@ export const projects = [
             {
                 'name': 'es6 reflect',
                 'link': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect'
+            }
+        ]
+    },
+    {
+        'id': 7,
+        'cover': todojexiareact,
+        'title': 'A TODO app using reactjs and Jexia',
+        'gitLink': 'https://github.com/atapas/todo-jexia-react',
+        'demoLink': 'https://todo-jexia-react.netlify.com/',
+        'description': 'todo-jexia-react is a Proof of Concept project for using Jexia along with a Reactjs app. What could be better than writing a TODO app? It is damm favorite for everyone. Agree?',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'jexia',
+                'link': 'https://www.jexia.com/en/'
             }
         ]
     }
