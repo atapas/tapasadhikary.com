@@ -73,10 +73,9 @@
                 img {
                     position: absolute;
                     height: 100%;
-                    width: auto;
+                    width: 100%;
                     max-width: unset;
-                    left: 50%;
-                    transform: translateX(-50%);
+                    margin-bottom: 0;
                 }
 
                 &:hover,
@@ -143,7 +142,7 @@
         @include simple-transition;
         @include border-radius(6px);
         display: inline-block;
-        margin-right: $spacer-xs;
+        margin: 0 $spacer-xs $spacer-xs 0;
         border: solid 2px rgba($theme-color-grey-light, 0.3);
         background-color: $theme-color-white;
         padding: $spacer-xs $spacer-sm $spacer-xs*1.2 $spacer-sm;
