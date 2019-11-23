@@ -5,10 +5,29 @@ import prediction from "../images/projects/prediction.png";
 import imageclassific from "../images/projects/imageclassification.jpg";
 import metaproges6 from "../images/projects/es6metaprog.png";
 import todojexiareact from "../images/projects/todojexiareact.gif";
+import aqireact from "../images/projects/aqi-react.png";
 
 export const projects = [
     {
         'id': 1,
+        'cover': aqireact,
+        'title': 'Air Quality Index(AQI)',
+        'gitLink': 'https://github.com/atapas/aqi-react',
+        'demoLink': 'https://air-quality-index.netlify.com/',
+        'description': 'This is a project created to know the Air Quality Index of various parts of the world using ReactJS.',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'Air Quality Programmatic APIs',
+                'link': 'https://aqicn.org/api/'
+            }
+        ]
+    },
+    {
+        'id': 2,
         'cover': nanny,
         'title': 'Nanny Plum',
         'gitLink': 'https://github.com/atapas/nanny-plum',
@@ -34,7 +53,7 @@ export const projects = [
         ]
     },
     {
-        'id': 2,
+        'id': 3,
         'cover': thoughthoroscope,
         'title': 'Thought Horoscope',
         'gitLink': 'https://github.com/atapas/thought-horoscope',
@@ -52,7 +71,7 @@ export const projects = [
         ]
     },
     {
-        'id': 3,
+        'id': 4,
         'cover': testcap,
         'title': 'Test Cap',
         'gitLink': 'https://github.com/atapas/testcap',
@@ -66,7 +85,7 @@ export const projects = [
         ]
     },
     {
-        'id': 4,
+        'id': 5,
         'cover': prediction,
         'title': 'Prediction App',
         'gitLink': 'https://github.com/atapas/horoscope-app',
@@ -84,7 +103,7 @@ export const projects = [
         ]
     },
     {
-        'id': 5,
+        'id': 6,
         'cover': imageclassific,
         'title': 'ML - Image Classification in Browser',
         'gitLink': 'https://github.com/atapas/ml-greenroots',
@@ -106,7 +125,7 @@ export const projects = [
         ]
     },
     {
-        'id': 6,
+        'id': 7,
         'cover': metaproges6,
         'title': 'JavaScript Metaprogramming',
         'gitLink': 'https://github.com/atapas/js-mtprog',
@@ -128,7 +147,7 @@ export const projects = [
         ]
     },
     {
-        'id': 7,
+        'id': 8,
         'cover': todojexiareact,
         'title': 'A TODO app using reactjs and Jexia',
         'gitLink': 'https://github.com/atapas/todo-jexia-react',
