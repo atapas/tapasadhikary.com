@@ -8,10 +8,33 @@ import todojexiareact from "../images/projects/todojexiareact.gif";
 import aqireact from "../images/projects/aqi-react.png";
 import covid from '../images/projects/covid.png';
 import addcopyright from '../images/projects/add-copyright.png';
+import i18n from '../images/projects/i18n.png';
 
 export const projects = [
     {
         'id': 1,
+        'cover': i18n,
+        'title': 'i18n-web for Internationalization',
+        'gitLink': 'https://github.com/atapas/i18n-js-npm',
+        'demoLink': 'https://www.npmjs.com/package/i18n-web',
+        'description': 'i18n-web is a simple tool helps in externalizing the strings in a JavaScript based Application such that, Internationalization(i18n) can be achieved easily. It has the additional capability of parameterizing the strings to get the dynamic content Internationalized.',
+        'tags': [
+            {
+                'name': 'i18n',
+                'link': 'https://en.wikipedia.org/wiki/Internationalization_and_localization'
+            },
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'npm',
+                'link': 'https://www.npmjs.com/package/i18n-web'
+            }
+        ]
+    },
+    {
+        'id': 2,
         'cover': addcopyright,
         'title': 'Add Copyright to Source Code Files',
         'gitLink': 'https://github.com/atapas/add-copyright',
@@ -25,7 +48,7 @@ export const projects = [
         ]
     },
     {
-        'id': 2,
+        'id': 3,
         'cover': covid,
         'title': 'COVID-19 World',
         'gitLink': 'https://github.com/atapas/covid-19',
@@ -43,7 +66,7 @@ export const projects = [
         ]
     },
     {
-        'id': 3,
+        'id': 4,
         'cover': aqireact,
         'title': 'Air Quality Index(AQI)',
         'gitLink': 'https://github.com/atapas/aqi-react',
@@ -61,7 +84,7 @@ export const projects = [
         ]
     },
     {
-        'id': 4,
+        'id': 5,
         'cover': nanny,
         'title': 'Nanny Plum',
         'gitLink': 'https://github.com/atapas/nanny-plum',
@@ -87,7 +110,7 @@ export const projects = [
         ]
     },
     {
-        'id': 5,
+        'id': 6,
         'cover': thoughthoroscope,
         'title': 'Thought Horoscope',
         'gitLink': 'https://github.com/atapas/thought-horoscope',
@@ -105,7 +128,7 @@ export const projects = [
         ]
     },
     {
-        'id': 6,
+        'id': 7,
         'cover': testcap,
         'title': 'Test Cap',
         'gitLink': 'https://github.com/atapas/testcap',
@@ -119,7 +142,7 @@ export const projects = [
         ]
     },
     {
-        'id': 7,
+        'id': 8,
         'cover': prediction,
         'title': 'Prediction App',
         'gitLink': 'https://github.com/atapas/horoscope-app',
@@ -137,7 +160,7 @@ export const projects = [
         ]
     },
     {
-        'id': 8,
+        'id': 9,
         'cover': imageclassific,
         'title': 'ML - Image Classification in Browser',
         'gitLink': 'https://github.com/atapas/ml-greenroots',
@@ -159,7 +182,7 @@ export const projects = [
         ]
     },
     {
-        'id': 9,
+        'id': 10,
         'cover': metaproges6,
         'title': 'JavaScript Metaprogramming',
         'gitLink': 'https://github.com/atapas/js-mtprog',
@@ -181,7 +204,7 @@ export const projects = [
         ]
     },
     {
-        'id': 10,
+        'id': 11,
         'cover': todojexiareact,
         'title': 'A TODO app using reactjs and Jexia',
         'gitLink': 'https://github.com/atapas/todo-jexia-react',
