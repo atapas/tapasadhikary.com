@@ -10,10 +10,23 @@ import covid from '../images/projects/covid.png';
 import addcopyright from '../images/projects/add-copyright.png';
 import i18n from '../images/projects/i18n.png';
 import notifyMe from '../images/projects/notify_me.png';
+import jamstack from '../images/projects/jamstack_cover.png';
 
 export const projects = [
     {
-        'id': 1,
+        'cover': jamstack,
+        'title': 'JAMstack for All',
+        'gitLink': 'https://youtu.be/qS1d0Lslq-A?t=103',
+        'demoLink': 'https://youtu.be/qS1d0Lslq-A?t=103',
+        'description': 'JAMstack is s modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup. Here is a session on JAMstack.',
+        'tags': [
+            {
+                'name': 'JAMstack',
+                'link': 'https://jamstack.org/'
+            }
+        ]
+    },
+    {
         'cover': notifyMe,
         'title': 'Notification Timeline',
         'gitLink': 'https://github.com/atapas/notifyme',
@@ -31,7 +44,6 @@ export const projects = [
         ]
     },
     {
-        'id': 2,
         'cover': i18n,
         'title': 'i18n-web for Internationalization',
         'gitLink': 'https://github.com/atapas/i18n-js-npm',
@@ -53,7 +65,6 @@ export const projects = [
         ]
     },
     {
-        'id': 3,
         'cover': addcopyright,
         'title': 'Add Copyright to Source Code Files',
         'gitLink': 'https://github.com/atapas/add-copyright',
@@ -67,7 +78,6 @@ export const projects = [
         ]
     },
     {
-        'id': 4,
         'cover': covid,
         'title': 'COVID-19 World',
         'gitLink': 'https://github.com/atapas/covid-19',
@@ -85,7 +95,6 @@ export const projects = [
         ]
     },
     {
-        'id': 5,
         'cover': aqireact,
         'title': 'Air Quality Index(AQI)',
         'gitLink': 'https://github.com/atapas/aqi-react',
@@ -103,7 +112,6 @@ export const projects = [
         ]
     },
     {
-        'id': 6,
         'cover': nanny,
         'title': 'Nanny Plum',
         'gitLink': 'https://github.com/atapas/nanny-plum',
@@ -129,7 +137,6 @@ export const projects = [
         ]
     },
     {
-        'id': 7,
         'cover': thoughthoroscope,
         'title': 'Thought Horoscope',
         'gitLink': 'https://github.com/atapas/thought-horoscope',
@@ -147,7 +154,6 @@ export const projects = [
         ]
     },
     {
-        'id': 8,
         'cover': testcap,
         'title': 'Test Cap',
         'gitLink': 'https://github.com/atapas/testcap',
@@ -161,7 +167,6 @@ export const projects = [
         ]
     },
     {
-        'id': 9,
         'cover': prediction,
         'title': 'Prediction App',
         'gitLink': 'https://github.com/atapas/horoscope-app',
@@ -179,7 +184,6 @@ export const projects = [
         ]
     },
     {
-        'id': 10,
         'cover': imageclassific,
         'title': 'ML - Image Classification in Browser',
         'gitLink': 'https://github.com/atapas/ml-greenroots',
@@ -201,7 +205,6 @@ export const projects = [
         ]
     },
     {
-        'id': 11,
         'cover': metaproges6,
         'title': 'JavaScript Metaprogramming',
         'gitLink': 'https://github.com/atapas/js-mtprog',
@@ -223,7 +226,6 @@ export const projects = [
         ]
     },
     {
-        'id': 12,
         'cover': todojexiareact,
         'title': 'A TODO app using reactjs and Jexia',
         'gitLink': 'https://github.com/atapas/todo-jexia-react',
