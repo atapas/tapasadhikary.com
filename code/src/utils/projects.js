@@ -13,8 +13,22 @@ import notifyMe from '../images/projects/notify_me.png';
 import jamstack from '../images/projects/jamstack_cover.png';
 import demolab from '../images/projects/demolab.png';
 import testimonial from '../images/projects/testimonial.png';
+import html5 from '../images/projects/html5.png';
 
 export const projects = [
+    {
+        'cover': html5,
+        'title': 'Useful HTML5 Tips',
+        'gitLink': 'https://github.com/atapas/html-tips-tricks',
+        'demoLink': 'https://html5-tips.netlify.app/',
+        'description': 'HTML5 is not a new thing. We have been using several features of it since the initial release(October 2014). As part of #100DaysOfCode initiative, I have taken time out to revisit the feature list again. See what I found? I have not really used a bunch of it!',
+        'tags': [
+            {
+                'name': 'HTML5',
+                'link': 'https://en.wikipedia.org/wiki/HTML5'
+            }
+        ]
+    },
     {
         'cover': testimonial,
         'title': 'Testimonial with Serverless',
