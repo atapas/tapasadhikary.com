@@ -11,8 +11,64 @@ import addcopyright from '../images/projects/add-copyright.png';
 import i18n from '../images/projects/i18n.png';
 import notifyMe from '../images/projects/notify_me.png';
 import jamstack from '../images/projects/jamstack_cover.png';
+import demolab from '../images/projects/demolab.png';
+import testimonial from '../images/projects/testimonial.png';
 
 export const projects = [
+    {
+        'cover': testimonial,
+        'title': 'Testimonial with Serverless',
+        'gitLink': 'https://github.com/atapas/testimonial',
+        'demoLink': 'http://testimonial-greenroots.netlify.app/',
+        'description': 'The testimonial app demonstrates the ease of building a serverless app using Gatsby, Netlify and FaunaDB.',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'JAMstack',
+                'link': 'https://jamstack.org/'
+            },
+            {
+                'name': 'Gatsby',
+                'link': 'https://www.gatsbyjs.org/tutorial/'
+            },
+            {
+                'name': 'Netlify',
+                'link': 'https://www.netlify.com/'
+            },
+            {
+                'name': 'FaunaDB',
+                'link': 'https://fauna.com/'
+            }
+        ]
+    },
+    {
+        'cover': demolab,
+        'title': 'DemoLab',
+        'gitLink': 'https://github.com/atapas/demolab',
+        'demoLink': 'https://demo.greenroots.info/',
+        'description': 'Demolab is my fantasy project created to understand the power of JAMstack using JavaScript(Reactjs), API(Netlify and Aws) and pre-built Markup(Gatsby).',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'JAMstack',
+                'link': 'https://jamstack.org/'
+            },
+            {
+                'name': 'Gatsby',
+                'link': 'https://www.gatsbyjs.org/tutorial/'
+            },
+            {
+                'name': 'Netlify',
+                'link': 'https://www.netlify.com/'
+            }
+        ]
+    },
     {
         'cover': jamstack,
         'title': 'JAMstack for All',
