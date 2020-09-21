@@ -9,10 +9,111 @@ import aqireact from "../images/projects/aqi-react.png";
 import covid from '../images/projects/covid.png';
 import addcopyright from '../images/projects/add-copyright.png';
 import i18n from '../images/projects/i18n.png';
+import notifyMe from '../images/projects/notify_me.png';
+import jamstack from '../images/projects/jamstack_cover.png';
+import demolab from '../images/projects/demolab.png';
+import testimonial from '../images/projects/testimonial.png';
+import html5 from '../images/projects/html5.png';
 
 export const projects = [
     {
-        'id': 1,
+        'cover': html5,
+        'title': 'Useful HTML5 Tips',
+        'gitLink': 'https://github.com/atapas/html-tips-tricks',
+        'demoLink': 'https://html5-tips.netlify.app/',
+        'description': 'HTML5 is not a new thing. We have been using several features of it since the initial release(October 2014). As part of #100DaysOfCode initiative, I have taken time out to revisit the feature list again. See what I found? I have not really used a bunch of it!',
+        'tags': [
+            {
+                'name': 'HTML5',
+                'link': 'https://en.wikipedia.org/wiki/HTML5'
+            }
+        ]
+    },
+    {
+        'cover': testimonial,
+        'title': 'Testimonial with Serverless',
+        'gitLink': 'https://github.com/atapas/testimonial',
+        'demoLink': 'http://testimonial-greenroots.netlify.app/',
+        'description': 'The testimonial app demonstrates the ease of building a serverless app using Gatsby, Netlify and FaunaDB.',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'JAMstack',
+                'link': 'https://jamstack.org/'
+            },
+            {
+                'name': 'Gatsby',
+                'link': 'https://www.gatsbyjs.org/tutorial/'
+            },
+            {
+                'name': 'Netlify',
+                'link': 'https://www.netlify.com/'
+            },
+            {
+                'name': 'FaunaDB',
+                'link': 'https://fauna.com/'
+            }
+        ]
+    },
+    {
+        'cover': demolab,
+        'title': 'DemoLab',
+        'gitLink': 'https://github.com/atapas/demolab',
+        'demoLink': 'https://demo.greenroots.info/',
+        'description': 'Demolab is my fantasy project created to understand the power of JAMstack using JavaScript(Reactjs), API(Netlify and Aws) and pre-built Markup(Gatsby).',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'JAMstack',
+                'link': 'https://jamstack.org/'
+            },
+            {
+                'name': 'Gatsby',
+                'link': 'https://www.gatsbyjs.org/tutorial/'
+            },
+            {
+                'name': 'Netlify',
+                'link': 'https://www.netlify.com/'
+            }
+        ]
+    },
+    {
+        'cover': jamstack,
+        'title': 'JAMstack for All',
+        'gitLink': 'https://youtu.be/qS1d0Lslq-A?t=103',
+        'demoLink': 'https://youtu.be/qS1d0Lslq-A?t=103',
+        'description': 'JAMstack is s modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup. Here is a session on JAMstack.',
+        'tags': [
+            {
+                'name': 'JAMstack',
+                'link': 'https://jamstack.org/'
+            }
+        ]
+    },
+    {
+        'cover': notifyMe,
+        'title': 'Notification Timeline',
+        'gitLink': 'https://github.com/atapas/notifyme',
+        'demoLink': 'https://notify-timeline.netlify.app/',
+        'description': 'This is a reactjs based component helps in managing the notifications in time-based manner. It is capable of keep tracking of the incoming notifications, manage read vs unread messages and allows many more customizations.',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'npm',
+                'link': 'https://www.npmjs.com/package/i18n-web'
+            }
+        ]
+    },
+    {
         'cover': i18n,
         'title': 'i18n-web for Internationalization',
         'gitLink': 'https://github.com/atapas/i18n-js-npm',
@@ -34,7 +135,6 @@ export const projects = [
         ]
     },
     {
-        'id': 2,
         'cover': addcopyright,
         'title': 'Add Copyright to Source Code Files',
         'gitLink': 'https://github.com/atapas/add-copyright',
@@ -48,7 +148,6 @@ export const projects = [
         ]
     },
     {
-        'id': 3,
         'cover': covid,
         'title': 'COVID-19 World',
         'gitLink': 'https://github.com/atapas/covid-19',
@@ -66,7 +165,6 @@ export const projects = [
         ]
     },
     {
-        'id': 4,
         'cover': aqireact,
         'title': 'Air Quality Index(AQI)',
         'gitLink': 'https://github.com/atapas/aqi-react',
@@ -84,7 +182,6 @@ export const projects = [
         ]
     },
     {
-        'id': 5,
         'cover': nanny,
         'title': 'Nanny Plum',
         'gitLink': 'https://github.com/atapas/nanny-plum',
@@ -110,7 +207,6 @@ export const projects = [
         ]
     },
     {
-        'id': 6,
         'cover': thoughthoroscope,
         'title': 'Thought Horoscope',
         'gitLink': 'https://github.com/atapas/thought-horoscope',
@@ -128,7 +224,6 @@ export const projects = [
         ]
     },
     {
-        'id': 7,
         'cover': testcap,
         'title': 'Test Cap',
         'gitLink': 'https://github.com/atapas/testcap',
@@ -142,7 +237,6 @@ export const projects = [
         ]
     },
     {
-        'id': 8,
         'cover': prediction,
         'title': 'Prediction App',
         'gitLink': 'https://github.com/atapas/horoscope-app',
@@ -160,7 +254,6 @@ export const projects = [
         ]
     },
     {
-        'id': 9,
         'cover': imageclassific,
         'title': 'ML - Image Classification in Browser',
         'gitLink': 'https://github.com/atapas/ml-greenroots',
@@ -182,7 +275,6 @@ export const projects = [
         ]
     },
     {
-        'id': 10,
         'cover': metaproges6,
         'title': 'JavaScript Metaprogramming',
         'gitLink': 'https://github.com/atapas/js-mtprog',
@@ -204,7 +296,6 @@ export const projects = [
         ]
     },
     {
-        'id': 11,
         'cover': todojexiareact,
         'title': 'A TODO app using reactjs and Jexia',
         'gitLink': 'https://github.com/atapas/todo-jexia-react',
