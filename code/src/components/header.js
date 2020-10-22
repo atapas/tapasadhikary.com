@@ -1,6 +1,6 @@
 import React from "react";
 
-import HeroImage from "../images/photo-tapas2.png";
+import HeroImage from "../images/hero-image.png";
 
 const Header = props => (
   <header className="page-header">
