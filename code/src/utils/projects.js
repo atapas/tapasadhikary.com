@@ -14,8 +14,118 @@ import jamstack from '../images/projects/jamstack_cover.png';
 import demolab from '../images/projects/demolab.png';
 import testimonial from '../images/projects/testimonial.png';
 import html5 from '../images/projects/html5.png';
+import shopnote from '../images/projects/shopnote.png';
+import purpleblog from '../images/projects/purple_blog.png';
+import princessfinder from '../images/projects/disney_princess.png';
+import keyboardevent from '../images/projects/keyboardevents.png';
+import themingsystem from '../images/projects/theme_builder.png';
 
 export const projects = [
+    {
+        'cover': themingsystem,
+        'title': 'The Theming System & Theme Builder',
+        'gitLink': 'https://github.com/atapas/theme-builder',
+        'demoLink': 'https://theme-builder.netlify.app/',
+        'description': 'The theming system helps you in building a theme of your choice and apply it to test it live. Why wait? Just give it a try.',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'styled-components',
+                'link': 'https://styled-components.com/docs/basics'
+            }
+        ]
+    },
+    {
+        'cover': keyboardevent,
+        'title': 'The Keyboard Playground',
+        'gitLink': 'https://github.com/atapas/js-keyevents-demo',
+        'demoLink': 'https://keyevents.netlify.app/',
+        'description': 'Get to know all about the key events just with a key stroke. It is built using the vanilla JavaScript.',
+        'tags': [
+            {
+                'name': 'JavaScript',
+                'link': 'https://blog.greenroots.info/'
+            }
+        ]
+    },
+    {
+        'cover': princessfinder,
+        'title': 'The Princess Finder',
+        'gitLink': 'https://github.com/atapas/princess-finder',
+        'demoLink': 'http://princess-finder.netlify.app/',
+        'description': 'I have borrowed all the Disney Princess dolls from my daughter to build a Machine Learning model such that, an application can recognize them with confidence using a webcam. I have given it a name too. The app is called, Princess Finder.',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'ml5js',
+                'link': 'https://ml5js.org/'
+            },
+            {
+                'name': 'machine learning',
+                'link': 'https://en.wikipedia.org/wiki/Machine_learning'
+            },
+            {
+                'name': 'Teachable Machine',
+                'link': 'https://teachablemachine.withgoogle.com/'
+            }
+        ]
+    },
+    {
+        'cover': purpleblog,
+        'title': 'The Purple Blog',
+        'gitLink': 'https://github.com/atapas/gatsby-bugfender',
+        'demoLink': 'https://gatsby-bugfender.netlify.app/',
+        'description': 'Want to create a Gatsbyjs based blog with Tags, Category, etc? Here is an example.',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'Jamstack',
+                'link': 'https://jamstack.org/'
+            },
+            {
+                'name': 'Gatsby',
+                'link': 'https://www.gatsbyjs.org/tutorial/'
+            }
+        ]
+    },
+    {
+        'cover': shopnote,
+        'title': 'Jamstack Shopnote',
+        'gitLink': 'https://github.com/atapas/shopnote',
+        'demoLink': 'https://shopnote.netlify.app/',
+        'description': 'shopnote is a Jamstack application helps in creating notes with shopping items. This application is built to showcase the Jamstack concept using Fauna, Netlify Serverless Functions and GatsbyJS. This is a sample application and should be used only for the learning purpose.',
+        'tags': [
+            {
+                'name': 'reactjs',
+                'link': 'https://reactjs.org/'
+            },
+            {
+                'name': 'Jamstack',
+                'link': 'https://jamstack.org/'
+            },
+            {
+                'name': 'Gatsby',
+                'link': 'https://www.gatsbyjs.org/tutorial/'
+            },
+            {
+                'name': 'Netlify',
+                'link': 'https://www.netlify.com/'
+            },
+            {
+                'name': 'FaunaDB',
+                'link': 'https://fauna.com/'
+            }
+        ]
+    },
     {
         'cover': html5,
         'title': 'Useful HTML5 Tips',
@@ -41,7 +151,7 @@ export const projects = [
                 'link': 'https://reactjs.org/'
             },
             {
-                'name': 'JAMstack',
+                'name': 'Jamstack',
                 'link': 'https://jamstack.org/'
             },
             {
@@ -63,14 +173,14 @@ export const projects = [
         'title': 'DemoLab',
         'gitLink': 'https://github.com/atapas/demolab',
         'demoLink': 'https://demo.greenroots.info/',
-        'description': 'Demolab is my fantasy project created to understand the power of JAMstack using JavaScript(Reactjs), API(Netlify and Aws) and pre-built Markup(Gatsby).',
+        'description': 'Demolab is my fantasy project created to understand the power of Jamstack using JavaScript(Reactjs), API(Netlify and Aws) and pre-built Markup(Gatsby).',
         'tags': [
             {
                 'name': 'reactjs',
                 'link': 'https://reactjs.org/'
             },
             {
-                'name': 'JAMstack',
+                'name': 'Jamstack',
                 'link': 'https://jamstack.org/'
             },
             {
@@ -85,13 +195,13 @@ export const projects = [
     },
     {
         'cover': jamstack,
-        'title': 'JAMstack for All',
+        'title': 'Jamstack for All',
         'gitLink': 'https://youtu.be/qS1d0Lslq-A?t=103',
         'demoLink': 'https://youtu.be/qS1d0Lslq-A?t=103',
-        'description': 'JAMstack is s modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup. Here is a session on JAMstack.',
+        'description': 'Jamstack is s modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup. Here is a session on Jamstack.',
         'tags': [
             {
-                'name': 'JAMstack',
+                'name': 'Jamstack',
                 'link': 'https://jamstack.org/'
             }
         ]
